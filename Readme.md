@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Богдан Коломиец](https://up.htmlacademy.ru/adaptive/20/user/1190941).
-* Наставник: `Неизвестно`.
+* Наставник: [Анатолий Долгов](https://up.htmlacademy.ru/htmlcss/28/user/150174).
 
 ---
 

@@ -1,0 +1,25 @@
+.cooperation__top {
+  display: flex;
+  padding-top: 26px;
+  padding-bottom: 22px;
+}
+
+.cooperation__heading {
+  min-width: 140px;
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:first-line {
+    line-height: 22px;
+  }
+}
+
+.cooperation__address {
+  margin: 0;
+
+  line-height: 20px;
+  @include desc-pair;
+}

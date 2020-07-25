@@ -1,0 +1,47 @@
+.offer {
+  margin-bottom: 27px;
+}
+
+.program {
+  min-height: 266px;
+  padding: 30px 20px 18px 20px;
+  margin-bottom: 20px;
+
+  background-color: $basic-lightgray;
+}
+
+.program__heading {
+  margin-top: 0;
+  margin-bottom: 31px;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--slimming {
+    padding-left: 11px;
+  }
+
+  &--gain-weight {
+    padding-left: 39px;
+  }
+}
+
+.program__description {
+  padding-bottom: 23px;
+  margin-top: 0;
+  margin-bottom: 19px;
+
+  @include desc-pair;
+
+  border-bottom: 1px solid $basic-gray;
+}
+
+.program__link {
+  font-size: 16px;
+  line-height: 16px;
+
+  color: $black;
+}

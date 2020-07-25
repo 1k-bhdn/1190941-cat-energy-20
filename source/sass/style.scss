@@ -1,1 +1,59 @@
-// Начните писать стили здесь
+@import "normalize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "grid.scss";
+@import "mixes.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-main.scss";
+@import "blocks/promo.scss";
+@import "blocks/offer.scss";
+@import "blocks/features.scss";
+@import "blocks/result.scss";
+@import "blocks/cooperation.scss";
+
+/* Fonts */
+@font-face {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: local("Oswald Regular"),
+  local("Oswald-Regular"),
+  url("../fonts/oswaldregular.woff2") format("woff2"),
+  url("../fonts/oswaldregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local("Oswald Medium"),
+  local("Oswald-Medium"),
+  url("../fonts/oswaldmedium.woff2") format("woff2"),
+  url("../fonts/oswaldmedium.woff") format("woff");
+}
+
+/* Global tags */
+body {
+  min-width: 320px;
+  padding: 0;
+
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+
+  color: $black;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

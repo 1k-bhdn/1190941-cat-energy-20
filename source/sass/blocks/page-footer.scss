@@ -1,0 +1,69 @@
+.page-footer {
+  padding-bottom: 22px;
+
+  background-color: $bg-color;
+}
+
+.page-footer__logo {
+  display: block;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 28px;
+
+  text-align: center;
+
+  border-bottom: 1px solid $basic-gray;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__logo-img {
+  width: 128px;
+  height: 24px;
+}
+
+.page-footer__developer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 34px;
+
+  font-size: 16px;
+  text-decoration: none;
+  @include desc-pair;
+
+  &:hover::after,
+  &:focus::after {
+    filter: hue-rotate(240deg) brightness(1.8);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 40px;
+
+    vertical-align: middle;
+
+    background-image: url("../../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    filter: grayscale(1);
+    opacity: 0.8;
+
+
+  }
+}

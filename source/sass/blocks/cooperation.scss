@@ -1,7 +1,7 @@
 .cooperation__top {
   display: flex;
-  padding-top: 26px;
-  padding-bottom: 22px;
+  padding-top: 28px;
+  padding-bottom: 26px;
 }
 
 .cooperation__heading {
@@ -22,4 +22,8 @@
 
   line-height: 20px;
   @include desc-pair;
+}
+
+.cooperation__map {
+  border: none;
 }

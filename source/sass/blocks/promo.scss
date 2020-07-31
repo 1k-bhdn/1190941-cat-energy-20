@@ -50,4 +50,13 @@
   color: $white;
 
   background-color: $basic-lightgreen;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    color: $pressed-button;
+  }
 }

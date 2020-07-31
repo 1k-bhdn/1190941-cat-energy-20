@@ -1,21 +1,51 @@
 .page-header {
   min-height: 66px;
   padding-top: 11px;
+  padding-bottom: 2px;
 
   background-color: $white;
 }
 
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
 .page-header__logo {
   display: inline-block;
-  width: 191px;
-  height: 38px;
+  width: auto;
+  height: auto;
 
   vertical-align: middle;
 
-  margin-left: 20px;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo-img {
   width: 191px;
   height: 38px;
+}
+
+.page-header__toggle {
+  width: 18px;
+  height: 18px;
+
+  border: none;
+  padding: 0;
+
+  background-color: transparent;
+
+  &--close {
+    background-image: url("../../img/icon-close.svg");
+  }
 }

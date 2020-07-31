@@ -9,17 +9,18 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="">
-        <img class="page-header__logo-img" src="././img/logo-mobile.svg" width="191" height="38" alt="Логотип, Кэт энерджи">
-      </a>
-
-      <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">Открыть меню</span>
+      <div class="page-header__top wrapper">
+        <a class="page-header__logo" href="">
+          <img class="page-header__logo-img" src="././img/logo-mobile.svg" width="191" height="38" alt="Логотип, Кэт энерджи">
+        </a>
+        <button class="page-header__toggle page-header__toggle--close">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
+      </div>
+      <nav class="page-header__nav main-nav">
         <ul class="main-nav__list list">
           <li class="main-nav__item">
-            <a class="main-nav__link link" href="">Главная</a>
+            <a class="main-nav__link main-nav__link--active link" href="">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
@@ -65,10 +66,10 @@
         <h2 class="features__heading">Как это работает</h2>
 
         <ul class="features__list list">
-          <li class="features__item">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="features__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="features__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="features__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          <li class="features__item features__item--leaf">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="features__item features__item--powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="features__item features__item--dining">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="features__item features__item--clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
         </ul>
       </section>
 
@@ -107,29 +108,37 @@
           <h2 class="cooperation__heading">Приглашаем<br>к сотрудничеству дилеров!</h2>
           <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <iframe class="cooperation__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1592930005172!5m2!1sru!2sua" width="100%" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+        <iframe class="cooperation__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1592930005172!5m2!1sru!2sua" width="100%" height="360" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="">
-        <img class="page-footer__logo-img" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип, Кэт энерджи">
-      </a>
+      <div class="wrapper">
+        <a class="page-footer__logo" href="">
+          <img class="page-footer__logo-img" src="././img/logo-footer.svg" width="128" height="24" alt="Логотип, Кэт энерджи">
+        </a>
 
-      <ul class="page-footer__socials socials">
-        <li class="socials__item">
-          <a class="socials__link" href="https://vk.com/">Вконтакте</a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="https://www.instagram.com/">Instagram</a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="https://www.facebook.com/">Facebook</a>
-        </li>
-      </ul>
+        <ul class="page-footer__socials socials list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="https://vk.com/">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--insta" href="https://www.instagram.com/">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="https://www.facebook.com/">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+        </ul>
 
-      <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
     </footer>
 
   </body>

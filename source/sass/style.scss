@@ -16,6 +16,17 @@
 @import "blocks/page-footer.scss";
 @import "blocks/socials.scss";
 
+/* Catalog main */
+@import "blocks/catalog.scss";
+@import "blocks/product.scss";
+@import "blocks/additional-goods.scss";
+@import "blocks/additional-product.scss";
+
+/* Form main */
+@import "blocks/program-selection.scss";
+@import "blocks/program-form.scss";
+@import "blocks/program-list.scss";
+
 /* Fonts */
 @font-face {
   font-family: "Oswald";
@@ -23,9 +34,9 @@
   font-style: normal;
   font-display: swap;
   src: local("Oswald Regular"),
-  local("Oswald-Regular"),
-  url("../fonts/oswaldregular.woff2") format("woff2"),
-  url("../fonts/oswaldregular.woff") format("woff");
+    local("Oswald-Regular"),
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
 }
 
 @font-face {
@@ -34,9 +45,9 @@
   font-style: normal;
   font-display: swap;
   src: local("Oswald Medium"),
-  local("Oswald-Medium"),
-  url("../fonts/oswaldmedium.woff2") format("woff2"),
-  url("../fonts/oswaldmedium.woff") format("woff");
+    local("Oswald-Medium"),
+    url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
 }
 
 /* Global tags */
@@ -58,6 +69,8 @@ img {
   height: auto;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }

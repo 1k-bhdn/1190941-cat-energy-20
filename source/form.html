@@ -9,58 +9,67 @@
   <body>
 
     <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-img" src="https://via.placeholder.com/150x150" width="150" height="150" title="Вернуться на главную страницу" alt="Логотип, Кэт энерджи">
-    </a>
-    <button class="page-header__toggle">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <nav class="page-header__nav main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <div class="page-header__top centered">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-img" src="././img/logo-mobile.svg" width="191" height="38" title="Вернуться на главную страницу" alt="Логотип, Кэт энерджи">
+        </a>
+        <button class="page-header__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+
+      <nav class="page-header__nav main-nav">
+        <ul class="main-nav__list list">
+          <li class="main-nav__item">
+            <a class="main-nav__link link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active link" href="">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="page-main">
       <section class="page-main__program-selection program-selection">
-        <h1 class="program-selection__heading">Подбор программы</h1>
-        <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="centered">
+          <h1 class="program-selection__heading">Подбор программы</h1>
+          <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
 
         <form class="program-selection__form program-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="program-form__fieldset cat-data">
             <legend class="visually-hidden">Данные кота</legend>
-            <p class="program-form__container">
-              <label class="program-form__label" for="cat-data__name">Имя:*</label>
-              <input class="program-form__input" id="cat-data__name" type="text" name="cat-name" placeholder="Барсик" required>
-            </p>
-            <p class="program-form__container">
-              <label class="program-form__label" for="cat-data__weight">Вес (кг):*</label>
-              <input class="program-form__input" id="cat-data__weight" name="cat-weight" type="number" placeholder="7" required>
-            </p>
-            <p class="program-form__container">
-              <label class="program-form__label" for="cat-data__age">Возраст (лет):</label>
-              <input class="program-form__input" id="cat-data__age" name="cat-age" type="number" placeholder="7">
-            </p>
-            <ul class="program-form__list program-list">
-              <li class="program-list__item">
-                <input class="program-list__input" id="program-list__slimming" type="radio" name="program" value="slimming" checked>
+
+            <div class="program-form__containers-wrapper">
+              <p class="program-form__container centered">
+                <label class="program-form__label" for="cat-data__name">Имя:*</label>
+                <input class="program-form__input" id="cat-data__name" type="text" name="cat-name" placeholder="Барсик" required>
+              </p>
+              <p class="program-form__container centered">
+                <label class="program-form__label" for="cat-data__weight">Вес (кг):*</label>
+                <input class="program-form__input" id="cat-data__weight" name="cat-weight" type="number" placeholder="7" required>
+              </p>
+              <p class="program-form__container centered">
+                <label class="program-form__label" for="cat-data__age">Возраст (лет):</label>
+                <input class="program-form__input" id="cat-data__age" name="cat-age" type="number" placeholder="7">
+              </p>
+            </div>
+
+            <ul class="program-form__list program-list list">
+              <li class="program-list__item centered">
+                <input class="program-list__input visually-hidden" id="program-list__slimming" type="radio" name="program" value="slimming" checked>
                 <label class="program-list__label" for="program-list__slimming">Похудение</label>
               </li>
-              <li class="program-list__item">
-                <input class="program-list__input" id="program-list__gain-weight" type="radio" name="program" value="gain-weight">
+              <li class="program-list__item centered">
+                <input class="program-list__input visually-hidden" id="program-list__gain-weight" type="radio" name="program" value="gain-weight">
                 <label class="program-list__label" for="program-list__gain-weight">Набор массы</label>
               </li>
-              <li class="program-list__item">
-                <input class="program-list__input" id="program-list__advice" type="radio" name="program" value="need-advice">
+              <li class="program-list__item centered">
+                <input class="program-list__input visually-hidden" id="program-list__advice" type="radio" name="program" value="need-advice">
                 <label class="program-list__label" for="program-list__advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>

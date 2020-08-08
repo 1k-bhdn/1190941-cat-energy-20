@@ -1,3 +1,9 @@
+.cooperation {
+  &--catalog {
+    background-color: $basic-lightergray;
+  }
+}
+
 .cooperation__top {
   display: flex;
   padding-top: 28px;
@@ -12,7 +18,7 @@
   font-size: 16px;
   text-transform: uppercase;
 
-  &:first-line {
+  &::first-line {
     line-height: 22px;
   }
 }
@@ -21,6 +27,7 @@
   margin: 0;
 
   line-height: 20px;
+
   @include desc-pair;
 }
 

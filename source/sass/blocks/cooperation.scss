@@ -1,13 +1,41 @@
 .cooperation {
-  &--catalog {
+  &--catalog,
+  &--form {
     background-color: $basic-lightergray;
+  }
+
+  @media (min-width: $display-desktop) {
+    position: relative;
   }
 }
 
 .cooperation__top {
   display: flex;
+
+  width: 280px;
+  margin: 0 auto;
   padding-top: 28px;
   padding-bottom: 26px;
+
+  @media (min-width: $display-table) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 630px;
+    padding: 62px 0 51px 0;
+  }
+
+  @media (min-width: $display-desktop) {
+    position: absolute;
+    top: 100px;
+    left: 65px;
+
+    max-width: 570px;
+    padding: 62px 89px 51px 76px;
+
+    background-color: $white;
+  }
 }
 
 .cooperation__heading {
@@ -21,6 +49,12 @@
   &::first-line {
     line-height: 22px;
   }
+
+  @media (min-width: $display-table) {
+    max-width: 171px;
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .cooperation__address {
@@ -28,9 +62,32 @@
 
   line-height: 20px;
 
-  @include desc-pair;
+  @include alt-pair;
+
+  @media (min-width: $display-table) {
+    max-width: 159px;
+    text-align: right;
+    font-size: 16px;
+  }
+
+  @media (min-width: $display-desktop) {
+    text-align: left;
+  }
+}
+
+.cooperation__address-city {
+  @media (min-width: $display-table) {
+    display: inline-block;
+    margin-top: 15px;
+  }
 }
 
 .cooperation__map {
+  width: 100%;
+
   border: none;
+
+  @media (min-width: $display-table) {
+    min-height: 400px;
+  }
 }

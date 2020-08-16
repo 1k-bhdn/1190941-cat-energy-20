@@ -1,31 +1,34 @@
-@import "normalize.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "grid.scss";
-@import "mixes.scss";
+@import "base/normalize";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/mixes";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/page-main.scss";
-@import "blocks/promo.scss";
-@import "blocks/offer.scss";
-@import "blocks/program.scss";
-@import "blocks/features.scss";
-@import "blocks/result.scss";
-@import "blocks/slider.scss";
+@import "blocks/index/promo";
+@import "blocks/index/offer";
+@import "blocks/index/program";
+@import "blocks/index/features";
+@import "blocks/index/result";
+@import "blocks/index/slider";
 @import "blocks/cooperation.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/socials.scss";
 
 /* Catalog main */
-@import "blocks/catalog.scss";
-@import "blocks/product.scss";
-@import "blocks/additional-goods.scss";
-@import "blocks/additional-product.scss";
+@import "blocks/catalog/catalog";
+@import "blocks/catalog/product";
+@import "blocks/catalog/attributes";
+@import "blocks/catalog/show-more";
+@import "blocks/catalog/additional-goods";
+@import "blocks/catalog/additional-product";
 
 /* Form main */
-@import "blocks/program-selection.scss";
-@import "blocks/program-form.scss";
-@import "blocks/program-list.scss";
+@import "blocks/form/program-selection";
+@import "blocks/form/program-form";
+@import "blocks/form/program-list";
+@import "blocks/form/program-diet";
+@import "blocks/form/list-item";
 
 /* Fonts */
 @font-face {
@@ -33,7 +36,8 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: local("Oswald Regular"),
+  src:
+    local("Oswald Regular"),
     local("Oswald-Regular"),
     url("../fonts/oswaldregular.woff2") format("woff2"),
     url("../fonts/oswaldregular.woff") format("woff");
@@ -44,14 +48,27 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local("Oswald Medium"),
+  src:
+    local("Oswald Medium"),
     local("Oswald-Medium"),
     url("../fonts/oswaldmedium.woff2") format("woff2"),
     url("../fonts/oswaldmedium.woff") format("woff");
 }
 
 /* Global tags */
+html {
+  height: 100%;
+}
+
 body {
+  display: grid;
+  grid-template-rows:
+    min-content
+    1fr
+    min-content;
+  align-content: start;
+
+  min-height: 100%;
   min-width: 320px;
   padding: 0;
 
@@ -65,7 +82,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

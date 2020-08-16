@@ -1,0 +1,152 @@
+.promo {
+  background-image: url("../../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 305px;
+  background-position: top;
+
+  @media (min-width: $display-table) and (max-width: 1199px) {
+    background-image: none;
+  }
+
+  @media (min-width: $display-desktop) {
+    max-width: 1440px;
+    margin: 0 auto 82px auto;
+
+    background-image: url("../../../img/index-background-desktop@1x.jpg");
+    background-size: 720px 696px;
+    background-position: right top;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  margin: 0 auto;
+
+  @media (max-width: $display-mobile) {
+    align-items: center;
+
+    min-height: 480px;
+    padding-top: 29px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $display-table) and (max-width: 1199px) {
+    position: relative;
+
+    width: 708px;
+    min-height: 872px;
+    padding: 62px 0 0 90px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $display-desktop) {
+    position: relative;
+
+    width: 1220px;
+    min-height: 696px;
+    margin: 0 auto;
+    padding: 141px 0 0 90px;
+  }
+}
+
+.promo__heading {
+  margin: 0;
+
+  font-weight: normal;
+
+  @media (max-width: $display-mobile) {
+    text-align: center;
+    color: $white;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $display-table) {
+    max-width: 414px;
+    margin-bottom: 35px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $display-desktop) {
+    margin-top: 80px;
+  }
+}
+
+.promo__description {
+  margin: 0;
+  text-transform: uppercase;
+
+  @media (max-width: $display-mobile) {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    text-align: center;
+    line-height: 14px;
+    color: $white;
+  }
+
+  @media (min-width: $display-table) {
+    margin-bottom: 49px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__product {
+  text-align: center;
+
+  @media (max-width: $display-mobile) {
+    margin-top: 31px;
+    width: 280px;
+    height: 270px;
+  }
+
+  @media (min-width: $display-table) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    width: 708px;
+    height: 609px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $display-desktop) {
+    left: 448px;
+    bottom: 60px;
+    z-index: 0;
+
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.promo__link {
+  &:hover,
+  &:focus {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    color: $pressed-button;
+  }
+
+  @media (max-width: $display-mobile) {
+    min-width: 280px;
+  }
+
+  @media (min-width: $display-table) {
+    width: fit-content;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

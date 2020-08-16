@@ -1,0 +1,68 @@
+.program-diet {
+  margin-bottom: 34px;
+
+  @media (min-width: $display-table) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    width: 630px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $display-desktop) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    width: 1220px;
+  }
+}
+
+.program-diet__input:checked ~ .program-diet__label .program-diet__check::before,
+.program-diet__input:checked ~ .program-diet__label .program-diet__check::after {
+  display: block;
+}
+
+.program-diet__check {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    display: none;
+    height: 2px;
+
+    background-color: $basic-lightgreen;
+  }
+
+  &::before {
+    top: 17px;
+    left: 6px;
+    width: 10px;
+
+    transform: rotate(47deg);
+  }
+
+  &::after {
+    top: 14px;
+    left: 11px;
+    width: 16px;
+
+    transform: rotate(-50deg);
+  }
+
+  @media (min-width: $display-table) {
+    &::before {
+      top: 22px;
+      left: 11px;
+    }
+
+    &::after {
+      top: 18px;
+      left: 16px;
+
+      transform: rotate(-53deg);
+    }
+  }
+}

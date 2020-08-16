@@ -1,0 +1,46 @@
+.program-list {
+  padding-top: 20px;
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid $basic-gray;
+
+  @media (min-width: $display-table) {
+    padding: 25px 28px;
+
+    border: 1px solid $basic-gray;
+  }
+
+  @media (min-width: $display-desktop) {
+    width: 568px;
+  }
+}
+
+.program-list__label {
+  &::before,
+  &::after {
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    left: 8px;
+    top: 8px;
+
+    width: 14px;
+    height: 14px;
+
+    background-color: $basic-lightgreen;
+  }
+
+  @media (min-width: $display-table) {
+    margin-bottom: 13px;
+
+    &::after {
+      left: 11px;
+      top: 11px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

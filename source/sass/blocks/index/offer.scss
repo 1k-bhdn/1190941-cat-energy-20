@@ -1,0 +1,14 @@
+.offer {
+  margin-bottom: 27px;
+
+  @media (min-width: $display-table) {
+    margin-bottom: 70px;
+  }
+}
+
+.offer__list {
+  @media (min-width: $display-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

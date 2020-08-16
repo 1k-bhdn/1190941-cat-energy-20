@@ -1,0 +1,106 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.centered {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $display-table) {
+    width: 708px;
+  }
+
+  @media (min-width: $display-desktop) {
+    width: 1220px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button {
+  padding: 10px 25px;
+
+  text-align: center;
+  color: $white;
+
+  background-color: $basic-lightgreen;
+}
+
+.accent-heading-container {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $basic-lightgreen;
+  }
+
+  @media (max-width: $display-mobile) {
+    padding-top: 28px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $display-table) {
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+}
+
+.accent-heading {
+  @media (max-width: $display-mobile) {
+    width: 280px;
+    margin: 0 auto 0 0;
+  }
+
+  @media (min-width: 321px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $display-table) {
+    width: 708px;
+  }
+
+  @media (min-width: $display-desktop) {
+    width: 1290px;
+  }
+}
+
+.accent-heading-text {
+  background-color: $white;
+
+  @media (max-width: $display-mobile) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $display-table) {
+    padding: 0 35px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

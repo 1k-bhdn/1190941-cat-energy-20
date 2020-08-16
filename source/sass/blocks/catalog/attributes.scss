@@ -1,0 +1,31 @@
+.attributes {
+  width: 100%;
+}
+
+.attributes__row {
+  @media (min-width: $display-table) {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+
+    border-bottom: 1px solid $special-gray;
+  }
+}
+
+.attributes__cell {
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+
+  @include alt-pair;
+
+  @media (min-width: $display-table) {
+    font-size: 16px;
+  }
+}
+
+.attributes__cell:last-child {
+  text-align: right;
+}

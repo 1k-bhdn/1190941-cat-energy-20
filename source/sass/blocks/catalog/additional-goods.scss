@@ -1,0 +1,120 @@
+.additional-goods {
+  padding-bottom: 35px;
+
+  @media (min-width: $display-table) {
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $display-desktop) {
+    padding-bottom: 85px;
+  }
+}
+
+.additional-goods__heading {
+  position: relative;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.additional-goods__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $display-table) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $display-desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.additional-goods__list {
+  margin-bottom: 40px;
+
+  border-top: 1px solid $special-gray;
+
+  @media (min-width: $display-table) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $display-desktop) {
+    min-width: 896px;
+    margin-bottom: 0;
+  }
+}
+
+.additional-goods__item {
+  padding-top: 13px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid $special-gray;
+
+  @media (min-width: $display-table) and (max-width: 1199px) {
+    padding: 26px 38px;
+    border-left: 1px solid $special-gray;
+    border-right: 1px solid $special-gray;
+  }
+}
+
+.additional-goods__promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  min-height: 289px;
+  padding-top: 45px;
+  padding-bottom: 18px;
+
+  background-image: url("../../../img/gift-photo-mobile@1x.jpg");
+
+  &::before {
+    content: "";
+    width: 56px;
+    height: 61px;
+
+    background-image: url("../../../img/icon-gift.svg");
+    background-repeat: no-repeat;
+
+    filter: invert(1);
+  }
+
+  @media (min-width: $display-table) and (max-width: 1199px) {
+    flex-direction: row;
+
+    padding: 0;
+    min-height: 200px;
+
+    background-image: url("../../../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-width: $display-desktop) {
+    width: 245px;
+    height: 289px;
+    margin: 0;
+  }
+}
+
+.additional-goods__text {
+  width: 161px;
+
+  font-family: $alt-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $display-table) and (max-width: 1199px) {
+    text-align: left;
+  }
+}

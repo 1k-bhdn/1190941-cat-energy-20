@@ -1,11 +1,12 @@
 .program-diet {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-row-gap: 32px;
+    grid-column-gap: 59px;
 
     width: 630px;
     margin: 0 auto;
@@ -52,7 +53,7 @@
     transform: rotate(-50deg);
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     &::before {
       top: 22px;
       left: 11px;

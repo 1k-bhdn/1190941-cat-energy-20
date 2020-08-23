@@ -17,13 +17,13 @@
   padding-top: 28px;
   padding-bottom: 26px;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 630px;
-    padding: 62px 0 51px 0;
+    padding: 65px 0 59px 0;
   }
 
   @media (min-width: $display-desktop) {
@@ -50,10 +50,10 @@
     line-height: 22px;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     max-width: 171px;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
   }
 }
 
@@ -64,7 +64,7 @@
 
   @include alt-pair;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     max-width: 159px;
     text-align: right;
     font-size: 16px;
@@ -76,9 +76,9 @@
 }
 
 .cooperation__address-city {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 18px;
   }
 }
 
@@ -87,7 +87,15 @@
 
   border: none;
 
-  @media (min-width: $display-table) {
+  background-image: url("../../img/bg-map-mobile@1x.png");
+
+  @media (min-width: $display-tablet) {
     min-height: 400px;
+
+    background-image: url("../../img/bg-map-tablet@1x.png");
+  }
+
+  @media (min-width: $display-desktop) {
+    background-image: url("../../img/bg-map-desktop@1x.png");
   }
 }

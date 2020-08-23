@@ -13,7 +13,7 @@
     margin: 0 auto;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     position: relative;
 
     display: flex;
@@ -50,7 +50,7 @@
     text-align: center;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 161px;
     height: 172px;
 
@@ -77,17 +77,16 @@
     align-items: flex-start;
 
     width: 140px;
-    height: 112px;
 
     text-align: center;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     align-items: center;
 
     min-height: 157px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 32px;
     margin-bottom: 30px;
   }
 }
@@ -98,7 +97,7 @@
     text-align: left;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 155px;
     text-align: center;
   }
@@ -112,7 +111,7 @@
   line-height: 20px;
   color: $special-darkestgray;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     font-size: 20px;
     line-height: 24px;
   }
@@ -121,12 +120,12 @@
 .product__link {
   grid-area: link;
 
-  margin-top: 13px;
-  padding: 12px;
+  margin-top: 12.5px;
+  padding: 11px;
 
   font-size: 16px;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 100%;
     margin-top: 0;
   }

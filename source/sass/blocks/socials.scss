@@ -4,11 +4,11 @@
 
   @media (max-width: $display-mobile) {
     border-bottom: 1px solid $basic-gray;
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
 
-  @media (min-width: $display-table) {
-    margin-left: 30px;
+  @media (min-width: $display-tablet) {
+    margin-left: 25px;
   }
 }
 
@@ -21,39 +21,40 @@
 
   background-position: center;
 
-  &::before {
-    content: "";
-    display: block;
-
-    background-repeat: no-repeat;
-  }
-
-  &--vk::before {
-    width: 22px;
-    height: 13px;
-
-    background-image: url("../../img/icon-vk.svg");
-  }
-
-  &--insta::before {
-    width: 16px;
-    height: 16px;
-
-    background-image: url("../../img/icon-insta.svg");
-  }
-
-  &--fb::before {
-    width: 10px;
-    height: 18px;
-
-    background-image: url("../../img/icon-fb.svg");
-  }
-
-  &:active::before {
+  &:active {
     opacity: 0.3;
   }
 
-  @media (min-width: $display-table) {
-    width: 45px;
+  &:hover .socials__icon,
+  &:focus .socials__icon {
+    fill: $basic-lightgreen;
+  }
+
+  @media (min-width: $display-tablet) {
+    width: 50px;
+  }
+}
+
+.socials__icon {
+  fill: $special-darkgray;
+
+  @media (min-width: $display-tablet) {
+    &--vk {
+      width: 29px;
+      height: 17px;
+      margin-bottom: 5px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+      margin-left: 7px;
+    }
+
+    &--fb {
+      width: 13px;
+      height: 27px;
+      margin-bottom: 7px;
+    }
   }
 }

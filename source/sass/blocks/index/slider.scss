@@ -7,6 +7,9 @@
 }
 
 .slider__input {
+  bottom: 35%;
+  right: 50%; //Дергался слайдер, это убрало проблему
+
   &--before {
     &:checked ~ .slider__slides .slide-2 {
       display: none;
@@ -21,44 +24,61 @@
 
   @media (max-width: $display-mobile) {
     &--before {
-      &:checked ~ .slider__controls::after {
+      &:checked ~ .slider__controls .slider__thumb {
         width: 35px;
       }
     }
 
     &--after {
-      &:checked ~ .slider__controls::after {
+      &:checked ~ .slider__controls .slider__thumb {
         width: 35px;
         transform: translateX(35px);
       }
     }
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     &--before {
-      &:checked ~ .slider__controls::after {
+      &:checked ~ .slider__controls .slider__thumb {
         transform: translateX(0);
+      }
+
+      &:focus ~ .slider__controls .slider__control--before {
+        border-bottom-style: solid;
+        border-bottom-color: $solid-gray;
+      }
+
+      &:active ~ .slider__controls .slider__control--before {
+        border-bottom-color: transparent;
       }
     }
 
     &--after {
-      &:checked ~ .slider__controls::after {
-        transform: translateX(422px);
+      &:checked ~ .slider__controls .slider__thumb {
+        transform: translateX(410px);
+      }
+
+      &:focus ~ .slider__controls .slider__control--after {
+        border-bottom-style: solid;
+        border-bottom-color: $solid-gray;
+      }
+
+      &:active ~ .slider__controls .slider__control--after {
+        border-bottom-color: transparent;
       }
     }
   }
 }
 
-
 .slider__slides {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 23px;
+  margin-bottom: 18px;
 }
 
 .slider-slide {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 690px;
     height: 517px;
   }
@@ -70,45 +90,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 228px;
+  width: 218px;
   height: 40px;
   padding: 7px 9px 5px 12px;
 
   margin: 0 auto;
 
-  &::before,
-  &::after {
-    content: "";
-
-    border-radius: 6px;
-  }
-
   &::before {
+    content: "";
     width: 84px;
     height: 14px;
 
     background-color: $white;
     border: 1px solid $special-gray;
+    border-radius: 6px;
 
     order: 1;
   }
 
-  &::after {
-    position: absolute;
-    top: 18px;
-    left: 78px;
-
-    width: 70px;
-    height: 6px;
-
-    background-color: $basic-lightgreen;
-    border-radius: 6px;
-
-    transition-duration: 0.2s;
-  }
-
-  @media (min-width: $display-table) {
-    width: 579px;
+  @media (min-width: $display-tablet) {
+    width: 590px;
 
     &::before {
       width: 428px;
@@ -116,19 +117,6 @@
 
       background-color: $range-gray;
       border: none;
-    }
-
-    &::after {
-      box-sizing: content-box;
-      top: 7px;
-      left: 65px;
-
-      width: 8px;
-      height: 8px;
-
-      border-radius: 50%;
-      border: 10px solid $white;
-      box-shadow: 0 0 0 1px $special-gray;
     }
   }
 }
@@ -139,14 +127,83 @@
   text-align: center;
   text-transform: uppercase;
 
+  cursor: pointer;
+
   &--after {
     order: 2;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     font-size: 20px;
     line-height: 30px;
 
     border-bottom: 1px dotted $special-gray;
+
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+      border-bottom-color: $solid-gray;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.slider__thumb {
+  position: absolute;
+  top: 18px;
+  left: 74px;
+
+  width: 70px;
+  height: 6px;
+
+  background-color: $basic-lightgreen;
+  border-radius: 6px;
+  outline: none;
+
+  transition-duration: 0.2s;
+
+  cursor: pointer;
+
+  @media (min-width: $display-tablet) {
+    top: 4px;
+    left: 72px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+    border: 1px solid $special-gray;
+
+    background-color: $white;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.16);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+      border-color: $basic-lightgreen;
+    }
+
+    &::before {
+      position: absolute;
+      right: 50%;
+      top: 50%;
+
+      content: "";
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background-color: $basic-lightgreen;
+
+      transform: translate(50%, -50%);
+    }
   }
 }

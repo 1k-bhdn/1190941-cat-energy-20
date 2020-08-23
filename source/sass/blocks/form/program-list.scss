@@ -4,7 +4,7 @@
 
   border-bottom: 1px solid $basic-gray;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     padding: 25px 28px;
 
     border: 1px solid $basic-gray;
@@ -32,9 +32,7 @@
     background-color: $basic-lightgreen;
   }
 
-  @media (min-width: $display-table) {
-    margin-bottom: 13px;
-
+  @media (min-width: $display-tablet) {
     &::after {
       left: 11px;
       top: 11px;
@@ -42,5 +40,11 @@
       width: 18px;
       height: 18px;
     }
+  }
+}
+
+.program-list__item:not(:last-child) .program-list__label {
+  @media (min-width: $display-tablet) {
+    margin-bottom: 13px;
   }
 }

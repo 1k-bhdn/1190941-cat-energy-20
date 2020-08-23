@@ -17,7 +17,10 @@ $special-darkestgray : #222222;
 $status-error: #ff8282;
 $bg-color : #eaeaea;
 $pressed-button: rgba(255, 255, 255, 0.3);
+$pressed-button-dark: rgba(68, 68, 68, 0.3);
 $range-gray: #dcdcdc;
+$solid-gray: #919191;
+$border-gray: #bababa;
 
 /* Fonts */
 $main-font: "Oswald", "Arial", sans-serif;
@@ -25,5 +28,5 @@ $alt-font: "Arial", sans-serif;
 
 /* Display */
 $display-mobile: 767px;
-$display-table: 768px;
+$display-tablet: 768px;
 $display-desktop: 1200px;

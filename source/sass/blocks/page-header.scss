@@ -4,16 +4,17 @@
 
   background-color: $white;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     justify-content: space-between;
     min-width: 708px;
     margin: 0 auto;
+    padding-top: 24px;
   }
 
   @media (min-width: $display-desktop) {
     width: 1220px;
-    padding-top: 41px;
+    padding-top: 50px;
 
     background-color: transparent;
 
@@ -35,7 +36,7 @@
 
   @media (max-width: $display-mobile) {
     width: 280px;
-    margin: 0 auto 17px auto;
+    margin: 0 auto 14px auto;
   }
 }
 
@@ -55,7 +56,7 @@
     opacity: 0.6;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 174px;
     height: auto;
   }
@@ -79,7 +80,7 @@
     background-image: url("../../img/icon-close.svg");
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: none;
   }
 }

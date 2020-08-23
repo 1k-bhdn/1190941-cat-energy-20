@@ -22,7 +22,7 @@
   width: 280px;
   margin: 0 auto;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 708px;
   }
 
@@ -37,12 +37,22 @@
 }
 
 .button {
-  padding: 10px 25px;
+  padding: 11px 25px;
 
+  font-size: 16px;
   text-align: center;
   color: $white;
 
   background-color: $basic-lightgreen;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    color: $pressed-button;
+  }
 }
 
 .accent-heading-container {
@@ -62,10 +72,10 @@
 
   @media (max-width: $display-mobile) {
     padding-top: 28px;
-    padding-bottom: 35px;
+    padding-bottom: 32px;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     padding-top: 65px;
     padding-bottom: 70px;
   }
@@ -81,7 +91,7 @@
     margin: 0 auto;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 708px;
   }
 
@@ -97,7 +107,7 @@
     padding: 0 20px;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     padding: 0 35px;
 
     font-size: 36px;

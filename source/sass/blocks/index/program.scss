@@ -5,9 +5,10 @@
 
   background-color: $basic-lightgray;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     min-height: 372px;
     padding: 77px 62px 53px 52px;
+    margin-bottom: 29px;
   }
 
   @media (min-width: $display-desktop) {
@@ -78,7 +79,7 @@
     }
   }
 
-  @media (min-width: $display-table) and (max-width: 1199px) {
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
     margin-bottom: 24px;
     padding-left: 0;
 
@@ -88,7 +89,7 @@
 
     &::before {
       top: 15px;
-      left: 402px;
+      left: 393px;
 
       width: 200px;
       height: 200px;
@@ -97,7 +98,7 @@
     &--slimming {
       &::after {
         top: 4px;
-        left: 431px;
+        left: 424px;
 
         width: 140px;
         height: 192px;
@@ -106,8 +107,8 @@
 
     &--gain-weight {
       &::after {
-        top: 60px;
-        left: 367px;
+        top: 59px;
+        left: 358px;
 
         width: 268px;
         height: 112px;
@@ -130,6 +131,8 @@
     }
 
     &--slimming {
+      padding-left: 20px;
+
       &::after {
         top: -35px;
         left: 15px;
@@ -140,6 +143,8 @@
     }
 
     &--gain-weight {
+      padding-left: 62px;
+
       &::after {
         top: -10px;
         left: -20px;
@@ -163,7 +168,7 @@
     border-bottom: 1px solid $basic-gray;
   }
 
-  @media (min-width: $display-table) and (max-width: 1199px){
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
     max-width: 377px;
     margin-bottom: 52px;
 
@@ -191,31 +196,43 @@
 }
 
 .program__link {
+  display: flex;
+  align-items: center;
+
   font-size: 16px;
   line-height: 16px;
+  text-align: center;
 
   color: $black;
+
+  &:hover .program__icon-use,
+  &:focus .program__icon-use {
+    transform: translateX(-2px);
+
+    transition: 0.4s;
+  }
 
   &:active {
     opacity: 0.3;
   }
 
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 12px;
-    margin-left: 15px;
-    margin-bottom: 1px;
-
-    vertical-align: baseline;
-
-    background-image: url("../../../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
-  }
-
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.program__icon-svg {
+  overflow: hidden;
+
+  margin-left: 15px;
+
+  @media (min-width: $display-tablet) {
+    margin-left: 25px;
+    height: 12px;
+  }
+}
+
+.program__icon-use {
+  transform: translateX(-8px);
 }

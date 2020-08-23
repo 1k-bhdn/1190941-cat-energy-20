@@ -1,0 +1,44 @@
+.owner-data__heading-container {
+  @media (max-width: $display-mobile) {
+    &::after {
+      top: 38%;
+    }
+  }
+}
+
+.owner-data__heading-text {
+  @media (max-width: $display-mobile) {
+    display: block;
+    width: 221px;
+  }
+}
+
+.owner-data__container {
+  @media (min-width: $display-tablet) {
+    margin-top: 18px;
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
+
+  @media (min-width: $display-desktop) {
+    &:first-child {
+      margin-right: 75px;
+    }
+  }
+}
+
+.owner-data__label {
+  margin-right: 10px;
+
+  @media (min-width: $display-tablet) {
+    margin-right: 18px;
+  }
+}
+
+.owner-data__container:first-child .owner-data__input {
+  @media (min-width: $display-tablet) {
+    padding-left: 23px;
+  }
+}

@@ -1,5 +1,5 @@
 .additional-product {
-  @media (min-width: $display-table) and (max-width: 1199px) {
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
     display: grid;
     grid-template-rows: 1fr min-content;
     grid-template-columns: 1fr 1fr;
@@ -26,7 +26,7 @@
   line-height: 16px;
   text-transform: uppercase;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     font-size: 20px;
     line-height: 20px;
   }
@@ -49,6 +49,7 @@
 
 .additional-product__cell {
   line-height: 14px;
+  padding: 0;
 
   @include alt-pair;
 
@@ -56,13 +57,13 @@
     text-align: right;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
 
     &:last-child {
-      width: 95px;
+      width: 90px;
     }
   }
 
@@ -75,7 +76,11 @@
   grid-area: link;
 
   display: block;
-  margin-top: 13px;
+  margin-top: 12px;
+
+  @media (min-width: $display-tablet) {
+    margin-top: 11px;
+  }
 
   @media (min-width: $display-desktop) {
     min-width: 244px;

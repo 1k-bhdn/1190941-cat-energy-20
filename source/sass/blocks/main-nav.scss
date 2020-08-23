@@ -1,12 +1,12 @@
 .main-nav {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     align-items: center;
   }
 }
 
 .main-nav__list {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
   }
 }
@@ -17,17 +17,17 @@
   @media (max-width: $display-mobile) {
     width: 100%;
     min-height: 65px;
-    padding-top: 22px;
-    padding-bottom: 10px;
+    padding-top: 23px;
+    padding-bottom: 12px;
 
     border-top: 1px solid $basic-lightgray;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: max-content;
 
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 36px;
     }
   }
 }
@@ -54,7 +54,9 @@
     border-bottom: 2px solid $basic-lightgreen;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
+    min-height: 35px;
+
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;

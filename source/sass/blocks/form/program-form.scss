@@ -1,5 +1,11 @@
 .program-form fieldset {
-  @media (min-width: $display-table) {
+  margin: 0;
+
+  @media (min-width: $display-tablet) {
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+
     &:last-of-type {
       margin-bottom: 55px;
     }
@@ -13,21 +19,27 @@
   padding: 0;
 }
 
+.program-form__heading-container {
+  @media (min-width: $display-tablet) {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
 .program-form__heading {
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
 }
 
-.owner-data__heading-text {
-  @media (max-width: $display-mobile) {
-    display: block;
-    width: 221px;
+.program-form__heading-text {
+  @media (min-width: $display-tablet) {
+    padding: 0 40px;
   }
 }
 
 .program-form__wrapper {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     width: 630px;
     margin: 0 auto;
   }
@@ -47,7 +59,7 @@
     padding-bottom: 24px;
   }
 
-  @media (min-width: $display-table) and (max-width: 1199px) {
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
     margin-bottom: 70px;
   }
 
@@ -57,6 +69,8 @@
 }
 
 .program-form__container {
+  position: relative;
+
   display: flex;
   align-items: center;
 
@@ -67,50 +81,90 @@
 
   @media (min-width: $display-desktop) {
     width: 100%;
-
-    .program-form__wrapper--owner-data & {
-      &:first-child {
-        margin-right: 75px;
-      }
-    }
   }
 }
 
 .program-form__container:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
+
+  @media (min-width: $display-tablet) {
+    margin-bottom: 16px;
+  }
 }
 
 .program-form__label {
+  min-width: max-content;
   margin-right: 14px;
 
   font-size: 16px;
   text-transform: uppercase;
   color: $special-darkergray;
 
-  @media (min-width: $display-table) {
+  cursor: pointer;
+
+  @media (min-width: $display-tablet) {
+    margin-right: 20px;
+
     font-size: 20px;
     line-height: 30px;
   }
 }
 
 .program-form__input {
+  width: 100%;
   flex-grow: 1;
 
-  padding: 13px 15px;
+  padding: 12px 40px 12px 15px;
 
   font-size: 16px;
   text-transform: uppercase;
 
   border: 1px solid $basic-gray;
+  outline: none;
+
+  &--error {
+    outline: 2px solid $status-error;
+
+    & ~ .program-form__icon {
+      fill: $status-error;
+    }
+
+    &:active,
+    &:focus {
+      outline-color: $special-darkergray;
+
+      & ~ .program-form__icon {
+        fill: $basic-lightgreen;
+      }
+    }
+  }
 
   &::placeholder {
     color: $special-darkergray;
   }
 
-  @media (min-width: $display-table) {
+  &:hover(:not(.program-form__input-error)) {
+    border-color: $special-gray;
+  }
+
+  &:active,
+  &:focus {
+    outline: 2px solid $special-darkergray;
+
+    & ~ .program-form__icon {
+      fill: $basic-lightgreen;
+    }
+  }
+
+  @media (min-width: $display-tablet) {
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.program-form__icon {
+  position: absolute;
+  right: 14px;
 }
 
 .program-form__comment {
@@ -126,8 +180,21 @@
 
   border: 1px solid $basic-gray;
 
-  @media (min-width: $display-table) {
+  &:hover {
+    border-color: $special-gray;
+  }
+
+  &:active,
+  &:focus {
+    outline: 2px solid $special-darkergray;
+  }
+
+  @media (min-width: $display-tablet) {
+    min-height: 175px;
     width: 630px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 9px 19px;
 
     font-size: 20px;
     line-height: 30px;
@@ -142,7 +209,7 @@
   width: 280px;
   margin: 0 auto;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -161,10 +228,15 @@
 
   border: none;
 
-  @media (min-width: $display-table) {
+  cursor: pointer;
+
+  @media (min-width: $display-tablet) {
     width: 282px;
+    padding: 15px 15px;
     margin-bottom: 0;
     margin-right: 55px;
+
+    font-size: 20px;
   }
 
   @media (min-width: $display-desktop) {
@@ -179,4 +251,11 @@
   font-family: $alt-font;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: $display-tablet) {
+    margin-left: 10px;
+    margin-bottom: 5px;
+
+    font-size: 16px;
+  }
 }

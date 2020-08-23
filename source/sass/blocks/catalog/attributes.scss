@@ -1,9 +1,17 @@
 .attributes {
   width: 100%;
+
+  @media (max-width: $display-mobile) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $display-tablet) {
+    margin-top: 10px;
+  }
 }
 
 .attributes__row {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
@@ -21,7 +29,7 @@
 
   @include alt-pair;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     font-size: 16px;
   }
 }

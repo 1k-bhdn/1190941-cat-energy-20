@@ -3,13 +3,13 @@
 
   background-color: $bg-color;
 
-  @media (min-width: $display-table) {
-    padding: 54px 31px 62px 30px;
+  @media (min-width: $display-tablet) {
+    padding: 39px 30px 41px 30px;
   }
 }
 
 .page-footer__wrapper {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,7 @@
   }
 
   @media (max-width: $display-mobile) {
-    padding-top: 40px;
+    padding-top: 38px;
     padding-bottom: 28px;
 
     border-bottom: 1px solid $basic-gray;
@@ -55,35 +55,24 @@
 
   @include alt-pair;
 
-  &:hover::after,
-  &:focus::after {
-    filter: hue-rotate(240deg) brightness(1.8);
+  &:hover .page-footer__icon-academy,
+  &:focus .page-footer__icon-academy {
+    fill: $basic-lightgreen;
   }
 
   &:active {
     opacity: 0.3;
   }
 
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 32px;
-    height: 40px;
-
-    vertical-align: middle;
-
-    background-image: url("../../img/htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    filter: grayscale(1);
-    opacity: 0.8;
+  @media (min-width: $display-tablet) {
+    padding-bottom: 3px;
   }
+}
 
-  @media (min-width: $display-table) {
-    &::after {
-      margin-left: 22px;
-    }
+.page-footer__icon-academy {
+  fill: $special-darkgray;
+
+  @media (min-width: $display-tablet) {
+    margin-left: 23px;
   }
 }

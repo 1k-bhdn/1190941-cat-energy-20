@@ -11,8 +11,19 @@
   }
 }
 
-.list-item__input:checked ~ .list-item__label::after {
-  display: block;
+.list-item__input {
+  &:hover ~ .list-item__label::before,
+  &:focus ~ .list-item__label::before {
+    border-color: $border-gray;
+  }
+
+  &:active ~ .list-item__label {
+    opacity: 0.3;
+  }
+
+  &:checked ~ .list-item__label::after {
+    display: block;
+  }
 }
 
 .list-item__label {
@@ -24,6 +35,8 @@
   text-transform: uppercase;
   vertical-align: middle;
   color: $special-darkestgray;
+
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -43,14 +56,19 @@
     display: none;
   }
 
-  @media (min-width: $display-table) {
+  &:hover::before,
+  &:focus::before {
+    border-color: $border-gray;
+  }
+
+  @media (min-width: $display-tablet) {
     font-size: 20px;
     line-height: 30px;
 
     &::before {
       width: 40px;
       height: 40px;
-      margin-right: 15px;
+      margin-right: 20px;
     }
   }
 }

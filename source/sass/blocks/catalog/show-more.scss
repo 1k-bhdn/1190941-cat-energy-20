@@ -1,5 +1,5 @@
 .show-more {
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -32,7 +32,7 @@
     margin: 0 auto;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     justify-content: space-between;
 
     min-height: 429px;
@@ -58,7 +58,7 @@
   line-height: 20px;
   text-transform: uppercase;
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     max-width: 134px;
     margin-bottom: 23px;
 
@@ -79,7 +79,7 @@
     line-height: 16px;
   }
 
-  @media (min-width: $display-table) {
+  @media (min-width: $display-tablet) {
     max-width: 167px;
     margin-bottom: 85px;
 
@@ -90,7 +90,6 @@
 
 .show-more__button-show {
   width: 100%;
-  padding: 15px;
 
   font-size: 16px;
   text-align: center;
@@ -99,4 +98,13 @@
   color: $special-darkergray;
 
   background-color: $basic-lightergray;
+
+  &:hover,
+  &:focus {
+    background-color: $special-lightgray;
+  }
+
+  &:active {
+    color: $pressed-button-dark;
+  }
 }

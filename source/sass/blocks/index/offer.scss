@@ -1,8 +1,12 @@
 .offer {
   margin-bottom: 27px;
 
-  @media (min-width: $display-table) {
-    margin-bottom: 70px;
+  @media (min-width: $display-tablet) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $display-desktop) {
+    margin-bottom: 69px;
   }
 }
 

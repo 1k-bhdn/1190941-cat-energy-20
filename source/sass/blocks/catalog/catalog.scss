@@ -11,8 +11,7 @@
 
   @media (min-width: $display-desktop) {
     width: 1220px;
-    padding-top: 55px;
-    margin: 0 auto;
+    padding-top: 21px;
   }
 }
 
@@ -46,18 +45,19 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 80px;
+    grid-column-gap: 80px;
+    grid-row-gap: 65px;
   }
 }
 
 .catalog__item {
+  &:first-child {
+    @media (max-width: $display-mobile) {
+      border-top: 1px solid $special-lightgray;
+    }
+  }
+
   @media (max-width: $display-mobile) {
     border-bottom: 1px solid $special-lightgray;
-  }
-}
-
-.catalog__item:first-child {
-  @media (max-width: $display-mobile) {
-    border-top: 1px solid $special-lightgray;
   }
 }

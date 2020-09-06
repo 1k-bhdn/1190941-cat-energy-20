@@ -28,8 +28,12 @@
 
   @media (min-width: $display-desktop) {
     min-height: 598px;
+    padding-top: 69px;
+    padding-bottom: 74px;
+    overflow: hidden;
 
     &::after {
+      bottom: 4px;
       background-color: $basic-lightergray;
     }
   }
@@ -47,7 +51,7 @@
     &::after {
       content: "";
       position: absolute;
-      right: -920px;
+      right: -935px;
       bottom: -70px;
       z-index: -1;
 
@@ -69,7 +73,7 @@
 
   @media (min-width: $display-tablet) and (max-width: 1199px) {
     width: 708px;
-    margin: 0 auto 65px auto;
+    margin: 0 auto 75px auto;
   }
 
   @media (min-width: $display-desktop) {
@@ -119,7 +123,7 @@
   }
 
   @media (min-width: $display-desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 }
 
@@ -157,7 +161,7 @@
   }
 
   @media (min-width: $display-desktop) {
-    margin-bottom: 55px;
+    margin-bottom: 47px;
   }
 }
 
@@ -259,7 +263,7 @@
 .result__expenses-text {
   @media (min-width: $display-desktop) {
     &:last-child {
-      margin-left: 68px;
+      margin-left: 63px;
       margin-right: auto;
     }
   }

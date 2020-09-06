@@ -15,6 +15,7 @@
   @media (min-width: $display-desktop) {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 78px;
 
     width: 1220px;
   }

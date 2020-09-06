@@ -75,6 +75,14 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 18px;
+
+  @media (min-width: $display-tablet) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $display-desktop) {
+    margin-bottom: 26px;
+  }
 }
 
 .slider-slide {
@@ -118,6 +126,10 @@
       background-color: $range-gray;
       border: none;
     }
+  }
+
+  @media (min-width: $display-desktop) {
+    margin: 0 auto 5px 67px;
   }
 }
 

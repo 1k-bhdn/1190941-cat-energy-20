@@ -2,8 +2,8 @@
   position: relative;
 
   @media (min-width: $display-desktop) {
-    max-width: 1440px;
-    margin: 0 auto 82px auto;
+    margin-bottom: 82px;
+    overflow: hidden;
   }
 
   &::before {
@@ -12,17 +12,18 @@
     content: "";
 
     background-image: url("../../../img/index-background-mobile@1x.jpg");
-    background-color: $basic-lightgreen;
+    background-color: $promo-bg;
     background-repeat: no-repeat;
 
     @media (max-width: $display-mobile) {
       right: 50%;
       transform: translateX(50%);
 
-      width: 320px;
+      width: 100%;
       height: 305px;
 
       background-size: 320px 305px;
+      background-position: center;
     }
 
     @media (min-resolution: 2dppx) {
@@ -34,10 +35,10 @@
     }
 
     @media (min-width: $display-desktop) {
-      right: 0;
+      left: 50vw;
       top: 0;
 
-      width: 720px;
+      width: 100%;
       height: 696px;
 
       background-image: url("../../../img/index-background-desktop@1x.jpg");

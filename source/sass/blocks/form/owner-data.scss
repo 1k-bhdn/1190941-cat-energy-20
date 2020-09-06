@@ -14,7 +14,7 @@
 }
 
 .owner-data__container {
-  @media (min-width: $display-tablet) {
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
     margin-top: 18px;
 
     &:last-child {

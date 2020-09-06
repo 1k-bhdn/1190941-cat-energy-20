@@ -48,8 +48,9 @@
 }
 
 .additional-product__cell {
-  line-height: 14px;
   padding: 0;
+
+  line-height: 14px;
 
   @include alt-pair;
 
@@ -69,6 +70,12 @@
 
   @media (min-width: $display-desktop) {
     text-align: left;
+
+    &:last-child {
+      width: 43px;
+
+      text-align: left;
+    }
   }
 }
 

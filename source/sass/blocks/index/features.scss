@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $display-desktop) {
-    margin-bottom: 35px;
+    margin-bottom: 0;
   }
 }
 
@@ -126,9 +126,12 @@
     }
   }
 
-  @media (min-width: $display-tablet) {
+  @media (min-width: $display-desktop) {
+    margin-bottom: 0;
+
     &:nth-child(even) {
       margin-left: 0;
+      margin-right: 0;
     }
   }
 }

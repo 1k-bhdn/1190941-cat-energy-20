@@ -21,6 +21,7 @@
 
 .program__heading {
   position: relative;
+  word-break: break-all;
 
   margin-top: 0;
   margin-bottom: 31px;
@@ -89,7 +90,7 @@
 
     &::before {
       top: 15px;
-      left: 393px;
+      left: 395px;
 
       width: 200px;
       height: 200px;
@@ -108,7 +109,7 @@
     &--gain-weight {
       &::after {
         top: 59px;
-        left: 358px;
+        left: 360px;
 
         width: 268px;
         height: 112px;
@@ -117,7 +118,7 @@
   }
 
   @media (min-width: $display-desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 73px;
 
     font-size: 36px;
     line-height: 36px;
@@ -161,9 +162,9 @@
 
   @media (max-width: $display-mobile) {
     padding-bottom: 23px;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
 
-    @include alt-pair;
+    @include alt-pair();
 
     border-bottom: 1px solid $basic-gray;
   }
@@ -185,7 +186,7 @@
 
   @media (min-width: $display-desktop) {
     max-width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 
     font-family: $alt-font;
     font-size: 16px;

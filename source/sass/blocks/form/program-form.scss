@@ -29,6 +29,12 @@
   padding: 0;
 }
 
+.program-form__fieldset:nth-child(4) .program-form__heading-container {
+  @media (max-width: $display-mobile) {
+    padding-top: 30px;
+  }
+}
+
 .program-form__heading-container {
   @media (min-width: $display-tablet) {
     padding-top: 55px;
@@ -69,6 +75,8 @@
 
 .program-form__containers-wrapper {
   @media (max-width: $display-mobile) {
+    min-height: 188px;
+
     border-bottom: 1px solid $basic-gray;
     padding-bottom: 24px;
   }
@@ -130,6 +138,30 @@
   }
 }
 
+.program-form__fieldset:first-child .program-form__input {
+  @media (max-width: $display-mobile) {
+    padding: 12px 15px;
+  }
+}
+
+.program-form__fieldset:first-child .program-form__container:last-child .program-form__input {
+  @media (max-width: $display-mobile) {
+    max-width: 172px;
+  }
+}
+
+.program-form__fieldset:nth-child(2) .program-form__container:last-child .program-form__input {
+  @media (max-width: $display-mobile) {
+    max-width: 204px;
+  }
+}
+
+fieldset:first-of-type .program-form__container:nth-child(2) .program-form__input {
+  @media (min-width: $display-tablet) {
+    padding-left: 20px;
+  }
+}
+
 .program-form__input {
   width: 100%;
   flex-grow: 1;
@@ -174,6 +206,10 @@
     & ~ .program-form__icon {
       fill: $basic-lightgreen;
     }
+  }
+
+  @media (max-width: $display-mobile) {
+    max-height: 45px;
   }
 
   @media (min-width: $display-tablet) {

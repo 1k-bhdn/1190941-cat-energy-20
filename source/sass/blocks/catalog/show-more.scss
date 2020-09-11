@@ -66,13 +66,17 @@
     line-height: 22px;
     text-align: center;
   }
+
+  @media (min-width: $display-desktop) {
+    margin-bottom: 27px;
+  }
 }
 
 .show-more__description {
   margin-top: 0;
   margin-bottom: 21px;
 
-  @include alt-pair;
+  @include alt-pair();
 
   @media (max-width: $display-mobile) {
     font-size: 12px;

@@ -28,7 +28,7 @@
   line-height: 16px;
   text-align: left;
 
-  @include alt-pair;
+  @include alt-pair();
 
   &:last-child {
     text-align: right;

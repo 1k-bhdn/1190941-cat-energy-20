@@ -21,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 630px;
+    width: 625px;
     padding: 65px 0 59px 0;
   }
 
@@ -62,7 +62,7 @@
 
   line-height: 20px;
 
-  @include alt-pair;
+  @include alt-pair();
 
   @media (min-width: $display-tablet) {
     max-width: 159px;

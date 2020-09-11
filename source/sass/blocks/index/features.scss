@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 47px;
+  margin-bottom: 39px;
 
   @media (min-width: $display-tablet) and (max-width: 1199px) {
     padding-bottom: 10px;
@@ -52,7 +52,13 @@
   padding-left: 80px;
   margin-bottom: 27px;
 
-  @include alt-pair;
+  @include alt-pair();
+
+  &:nth-child(4) {
+    @media (max-width: $display-mobile) {
+      display: none;
+    }
+  }
 
   &::before,
   &::after {
@@ -78,6 +84,16 @@
     height: 50px;
   }
 
+  &--problem {
+    display: none;
+
+    @media (max-width: $display-mobile) {
+      display: block;
+    }
+
+    /*Решает проблему с переносом строки*/
+  }
+
   &--leaf::after {
     background-image: url("../img/advantage-leaf@1x.png");
   }
@@ -92,6 +108,11 @@
 
   &--clock::after {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  @media (max-width: $display-mobile) {
+    min-height: 60px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $display-tablet) {
@@ -132,6 +153,10 @@
     &:nth-child(even) {
       margin-left: 0;
       margin-right: 0;
+    }
+
+    &:nth-child(4) {
+      margin-right: -5px;
     }
   }
 }

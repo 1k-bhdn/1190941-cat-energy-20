@@ -2,12 +2,14 @@
   @media (min-width: $display-tablet) {
     display: flex;
     align-items: center;
+    max-width: 550px;
   }
 }
 
 .main-nav__list {
   @media (min-width: $display-tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 

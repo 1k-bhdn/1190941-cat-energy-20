@@ -1,5 +1,7 @@
 .owner-data__heading-container {
   @media (max-width: $display-mobile) {
+    padding-top: 25px;
+
     &::after {
       top: 38%;
     }

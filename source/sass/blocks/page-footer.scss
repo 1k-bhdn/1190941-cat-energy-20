@@ -53,7 +53,7 @@
   font-size: 16px;
   text-decoration: none;
 
-  @include alt-pair;
+  @include alt-pair();
 
   &:hover .page-footer__icon-academy,
   &:focus .page-footer__icon-academy {

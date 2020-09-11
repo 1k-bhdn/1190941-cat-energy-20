@@ -11,13 +11,13 @@
   right: 50%; //Дергался слайдер, это убрало проблему
 
   &--before {
-    &:checked ~ .slider__slides .slide-2 {
+    &:checked ~ .slider__slides .slider__slide:nth-child(2) {
       display: none;
     }
   }
 
   &--after {
-    &:checked ~ .slider__slides .slide-1 {
+    &:checked ~ .slider__slides .slider__slide:nth-child(1) {
       display: none;
     }
   }
@@ -85,10 +85,14 @@
   }
 }
 
-.slider-slide {
+.slider__image {
   @media (min-width: $display-tablet) {
     width: 690px;
     height: 517px;
+  }
+
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
+    margin-left: 15px;
   }
 }
 
@@ -126,6 +130,10 @@
       background-color: $range-gray;
       border: none;
     }
+  }
+
+  @media (min-width: $display-tablet) and (max-width: 1199px) {
+    padding: 6px 11px 6px 9px;
   }
 
   @media (min-width: $display-desktop) {
